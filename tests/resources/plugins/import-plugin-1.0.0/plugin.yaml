@@ -1,10 +1,12 @@
 tosca_definitions_version: tosca_simple_yaml_1_0
 
+imports:
+  - aria-1.0
 
 topology_template:
 
   policies:
-    import-plugin:
+  - import-plugin:
       description: >-
         plugin to test import of plugin.yaml.
       type: aria.Plugin
