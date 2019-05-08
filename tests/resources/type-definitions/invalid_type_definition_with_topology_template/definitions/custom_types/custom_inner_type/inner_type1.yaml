@@ -14,4 +14,4 @@ node_types:
 topology_template:
     node_templates:
         test_node:
-            type:non_normative_type_definition_inner_type1_compute
+            type: non_normative_type_definition_inner_type1_compute
