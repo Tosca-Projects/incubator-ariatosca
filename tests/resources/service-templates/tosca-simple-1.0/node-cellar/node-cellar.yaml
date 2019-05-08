@@ -291,7 +291,7 @@ topology_template:
 
   policies:
 
-    app_scaling:
+    - app_scaling:
       type: aria.Scaling
       properties:
         max_instances: 10
@@ -300,7 +300,7 @@ topology_template:
         - node_cellar
         - nodejs
 
-    host_scaling:
+    - host_scaling:
       type: openstack.Scaling
       properties:
         bandwidth_threshold: 2 GB
@@ -309,7 +309,7 @@ topology_template:
       targets: # node templates or groups
         - node_cellar_group
 
-    juju:
+    - juju:
       description: >-
         Juju plugin executes charms.
       type: aria.Plugin
@@ -317,12 +317,12 @@ topology_template:
         version: 1.0
         enabled: false
 
-    maintenance_on:
+    - maintenance_on:
       type: MaintenanceWorkflow
       properties:
         enabled: true
 
-    maintenance_off:
+    - maintenance_off:
       type: MaintenanceWorkflow
       properties:
         enabled: false

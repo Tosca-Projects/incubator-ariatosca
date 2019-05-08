@@ -130,7 +130,7 @@ topology_template:
             password: password
 
   policies:
-    configuration:
+  - configuration:
       type: clearwater.Configuration
       properties:
         zone: example.com
